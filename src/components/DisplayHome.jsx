@@ -11,7 +11,7 @@ const DisplayHome = () => {
 
   useEffect(() => {
     // Fetch albums
-    axios.get("http://localhost:4000/api/album/list")
+    axios.get("https://spotifybackendj.onrender.com/api/album/list")
       .then(res => {
         setAlbums(res.data);
       })
@@ -20,7 +20,7 @@ const DisplayHome = () => {
       });
 
     // Fetch songs
-    axios.get("http://localhost:4000/api/song/list")
+    axios.get("https://spotifybackendj.onrender.com/api/song/list")
       .then(res => {
         setSongs(res.data);
       })
@@ -38,7 +38,7 @@ const DisplayHome = () => {
         <div className="flex overflow-x-auto pl-4 space-x-4 scrollbar-hide">
           {albums.map((item) => (
             <AlbumItem
-              key={item._id || item.id} // _id thường là trong DB
+              key={item._id || item.id}
               id={item._id || item.id}
               image={item.image}
               name={item.name}

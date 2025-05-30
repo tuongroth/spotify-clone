@@ -3,7 +3,6 @@ import { useLocation, Routes, Route } from 'react-router-dom';
 import DisplayHome from './DisplayHome';
 import DisplayAlbum from './DisplayAlbum';
 
-
 const Display = () => {
   const [albums, setAlbums] = useState([]);
   const displayRef = useRef();
@@ -11,7 +10,7 @@ const Display = () => {
 
   // Fetch albums từ backend API
   useEffect(() => {
-    fetch('http://localhost:4000/api/album/list')
+    fetch('https://spotifybackendj.onrender.com/api/album/list')
       .then(res => res.json())
       .then(data => setAlbums(data))
       .catch(err => console.error('Lỗi lấy albums:', err));
