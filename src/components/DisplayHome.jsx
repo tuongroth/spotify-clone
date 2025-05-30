@@ -11,7 +11,7 @@ const DisplayHome = () => {
 
   useEffect(() => {
     // Fetch albums
-    axios.get("https://spotifybackendj.onrender.com/api/album/list")
+    axios.get("http://localhost:4000/api/album/list")
       .then(res => {
         setAlbums(res.data);
       })

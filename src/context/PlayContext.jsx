@@ -18,7 +18,7 @@ const PlayerContextProvider = (props) => {
   });
 
   // Thay URL backend đúng đây
-  const API_BASE_URL = "https://spotifybackendj.onrender.com";
+  const API_BASE_URL = "http://localhost:4000";
 
   useEffect(() => {
     const fetchData = () => {
