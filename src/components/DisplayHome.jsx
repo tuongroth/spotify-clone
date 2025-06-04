@@ -20,7 +20,7 @@ const DisplayHome = () => {
       });
 
     // Fetch songs
-    axios.get("https://spotifybackendj.onrender.com/api/song/list")
+    axios.get("http://localhost:4000/api/song/list")
       .then(res => {
         setSongs(res.data);
       })
